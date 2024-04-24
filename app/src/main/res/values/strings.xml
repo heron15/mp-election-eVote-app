@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">eVote</string>
+    <string name="welcome">Scan your national ID card or manually signup and  vote your favorite candidate easily!</string>
+</resources>

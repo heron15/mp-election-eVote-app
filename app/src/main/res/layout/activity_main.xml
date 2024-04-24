@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/mp_logo"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:id="@+id/login_below"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="250dp"
+                    android:background="@drawable/login_card_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/t01"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="Welcome to eVote!"
+                        android:textColor="@color/secondColor"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/t02"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t01"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/welcome"
+                        android:textColor="@color/secondColor"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/scanYourIdCardButton"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_above="@+id/t03"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/button_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:textSize="16sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Scan Your ID Card"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/t03"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/signupLoginButton"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="Or"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/signupLoginButton"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="70dp"
+                        android:background="@drawable/button_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:textSize="16sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Manually SignUp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

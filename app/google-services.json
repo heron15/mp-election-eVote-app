@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "350979300099",
+    "project_id": "evote-a16f0",
+    "storage_bucket": "evote-a16f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350979300099:android:2f7ba4abd9855c3bbe2736",
+        "android_client_info": {
+          "package_name": "com.appkrafty.evote"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw1IC91mf16bLHOCaU6c0tgfnc298H2lM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
