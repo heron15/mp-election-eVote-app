@@ -99,9 +99,7 @@ public class ScanIDCard extends AppCompatActivity {
     LinearLayout submitButton;
     ProgressBar cpBPrgs;
     private DatabaseReference evoteAppRef;
-    private static final String check_info_url =
-            "https://evote101.000webhostapp.com/info_check.php";
-
+    
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -314,29 +312,6 @@ public class ScanIDCard extends AppCompatActivity {
         } else {
             return (info.orientation - degrees + 360) % 360;
         }
-    }
-
-    private void performTextRecognition(Bitmap bitmap, boolean isFirstImage) {
-        FirebaseVisionTextRecognizer textRecognizer;
-        FirebaseVisionCloudTextRecognizerOptions options = new FirebaseVisionCloudTextRecognizerOptions.Builder()
-                .setLanguageHints(Arrays.asList("bn", "en"))
-                .build();
-        textRecognizer = FirebaseVision.getInstance().getCloudTextRecognizer(options);
-
-        FirebaseVisionImage firebaseVisionImage = FirebaseVisionImage.fromBitmap(bitmap);
-
-        textRecognizer.processImage(firebaseVisionImage)
-                .addOnSuccessListener(firebaseVisionText -> {
-                    if (isFirstImage) {
-                        processTextRecognitionResult01(firebaseVisionText);
-                    } else {
-                        processTextRecognitionResult02(firebaseVisionText);
-                    }
-                })
-                .addOnFailureListener(e -> {
-                    dialog.dismiss();
-                    Toast.makeText(ScanIDCard.this, "Text recognition failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                });
     }
 
     private void processTextRecognitionResult01(FirebaseVisionText firebaseVisionText) {
